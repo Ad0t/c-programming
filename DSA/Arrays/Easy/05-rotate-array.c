@@ -1,5 +1,8 @@
 #include<stdio.h>
 
+void printArr (int arr[], int n);
+void rotateArrayBy1 (int arr[], int n);
+
 void printArr (int arr[], int n) {
     printf("Array:\t");
     for (int i = 0; i < n; i++) {

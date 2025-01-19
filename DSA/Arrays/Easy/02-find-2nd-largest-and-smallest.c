@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <limits.h>
 
+int secondLargestInArr (int arr[], int n);
+int secondSmallestInArr (int arr[], int n);
+
 int secondLargestInArr (int arr[], int n) {
     int largest = arr[0];
     int slargest = -1;

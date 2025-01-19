@@ -1,7 +1,9 @@
 #include<stdio.h>
 
+void printArr (int arr[], int n);       // function to print the array
+void swapper (int *x, int *y);          // function to do the swapping
+void selectionSort (int arr[], int n);  // function to sort
 
-// function to print the array
 void printArr (int arr[], int n) {
     printf("Array:\t");
     for (int i = 0; i < n; i++) {
@@ -10,7 +12,6 @@ void printArr (int arr[], int n) {
     printf("\n");
 }
 
-// function to do the swapping
 void swapper (int *x, int *y) {
     int temp = *y;
     *y = *x;

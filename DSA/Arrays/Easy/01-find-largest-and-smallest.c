@@ -37,7 +37,8 @@ int main () {
     int n = 6;
     int arr[] = {23, 34, 55, 76, 43, 92};
 
-    // printing the largest element
+    // printing the largest and smallest element
     printf("The largest element is: %d\n", largestInArr(arr, n));
+    printf("The smallest element is: %d\n", smallestInArr(arr, n));
     return 0;
 }

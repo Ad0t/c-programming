@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+void inputArr (int arr[], int n);
+void printArr (int arr[], int n);
+void moveZerosToBack_BRUTE (int arr[], int n);
+void moveZerosToBack_OPTI (int arr[], int n);
+
+
 void inputArr (int arr[], int n) {
     printf("Enter %d elements:\n", n);
     for (int i = 0; i < n; i++) {

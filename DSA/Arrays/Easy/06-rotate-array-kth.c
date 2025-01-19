@@ -1,5 +1,10 @@
 #include<stdio.h>
 
+void printArr (int arr[], int n);
+void rotateArrayByK_BRUTE (int arr[], int n, int k);
+void reverseArr (int arr[], int start, int end);
+void rotateArrayByK_OPTI (int arr[], int n, int k);
+
 void printArr (int arr[], int n) {
     printf("Array:\t");
     for (int i = 0; i < n; i++) {
