@@ -1,3 +1,4 @@
+// given that the arrays are sorted
 #include<stdio.h>
 
 void findIntersection(int arr1[], int arr2[], int n, int m, int unionArr[], int *unionSize);
@@ -16,19 +17,10 @@ void findIntersection(int arr1[], int arr2[], int n, int m, int intersectionArr[
 
     while (i < n && j < m) {
         if (arr1[i] < arr2[j]) {
-            // if (k == 0 || intersectionArr[k-1] != arr1[i]) {
-            //     intersectionArr[k++] = arr1[i];
-            // }
             i++;
         } else if (arr1[i] > arr2[j]){
-            // if (k == 0 || intersectionArr[k-1] != arr2[j]) {
-            //     intersectionArr[k++] = arr2[j];
-            // }
             j++;
         } else {
-            // if (k == 0 || intersectionArr[k-1] != arr1[i]) {
-            //     intersectionArr[k++] = arr1[i];
-            // }
             intersectionArr[k++] = arr1[i];
             i++;
             j++;

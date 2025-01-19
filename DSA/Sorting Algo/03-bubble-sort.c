@@ -1,6 +1,7 @@
 #include<stdio.h>
 
-void insertionSort (int arr[], int n);
+void bubbleSort (int arr[], int n);
+void optimizedBubbleSort (int arr[], int n);
 void swapper (int *x, int *y);
 void printArr (int arr[], int n);
 
@@ -18,13 +19,25 @@ void swapper (int *x, int *y) {
     *y = temp;
 }
 
-void insertionSort (int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        int j = i;
-        while (j > 0 && arr[j - 1] > arr[j]) {
-            swapper(&arr[j - 1], &arr[j]);
-            j--;
+void bubbleSort (int arr[], int n) {
+    for (int i = n-1; i >= 0; i--) {
+        for (int j = 0; j < i; j++) {
+            if (arr[j] > arr[j+1]) {
+                swapper(&arr[j], &arr[j+1]);
+            }
         }
+    }
+} 
+void optimizedBubbleSort (int arr[], int n) {
+    for (int i = n-1; i >= 0; i--) {
+        int swapped = 0;
+        for (int j = 0; j < i; j++) {
+            if (arr[j] > arr[j+1]) {
+                swapper(&arr[j], &arr[j+1]);
+                swapped = 1;
+            }
+        }
+        if (swapped == 0) break;
     }
 } 
 
@@ -35,7 +48,8 @@ int main () {
     printf("Original array:\t");
     printArr(arr, n);
     
-    insertionSort(arr, n);
+    bubbleSort(arr, n);
+    optimizedBubbleSort(arr, n);
     
     printf("Sorted array:\t");
     printArr(arr, n);
