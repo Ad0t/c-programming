@@ -1,26 +1,32 @@
 #include <stdio.h>
+#include <limits.h>
 
-int largestInArr (int arr[], int n);
-int smallestInArr (int arr[], int n);
-
-int largestInArr (int arr[], int n) {
+int secondLargestInArr (int arr[], int n) {
     int largest = arr[0];
+    int slargest = -1;
     for (int i = 1; i < n; i++) {
         if (largest < arr[i]) {
+            slargest = largest;
             largest = arr[i];
+        } else if (arr[i] < largest && arr[i] > slargest) {
+            slargest = arr[i];
         }
     }
-    return largest;
+    return slargest;
 }
 
-int smallestInArr (int arr[], int n) {
+int secondSmallestInArr (int arr[], int n) {
     int smallest = arr[0];
+    int ssmallest = INT_MAX;
     for (int i = 1; i < n; i++) {
         if (smallest > arr[i]) {
+            ssmallest = smallest;
             smallest = arr[i];
+        } else if (arr[i] != smallest && arr[i] < ssmallest) {
+            ssmallest = arr[i];
         }
     }
-    return smallest;
+    return ssmallest;
 }
 
 int main () {
@@ -38,6 +44,7 @@ int main () {
     int arr[] = {23, 34, 55, 76, 43, 92};
 
     // printing the largest element
-    printf("The largest element is: %d\n", largestInArr(arr, n));
+    printf("The second largest element is: %d\n", secondLargestInArr(arr, n));
+    printf("The second smallest element is: %d\n", secondSmallestInArr(arr, n));
     return 0;
 }
