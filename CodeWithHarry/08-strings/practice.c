@@ -6,11 +6,21 @@ Which of the following is used to appropriately read a multi-word string.
 2. puts()
 3. printf()
 4. scanf()
+
+ANSWER: gets()
 */
 /*
 Write a program to take string as an input from the user using %c and %s confirm
 that the strings are equal.
 */
+void queso2 () {
+    char str1[100], str2[100];
+    printf("Enter a string: ");
+    scanf("%s", str1);
+    printf("Enter another string: ");
+    scanf("%c", str2);
+    printf("%s %c", str1, str2);
+}
 /*
 Write your own version of strlen function from <string.h>
 */
