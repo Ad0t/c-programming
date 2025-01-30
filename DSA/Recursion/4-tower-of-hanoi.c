@@ -15,7 +15,13 @@ void towerOfHanoi (int n, char src, char aux, char des) {
 }
 
 int main () {
-    towerOfHanoi(4, 'S', 'H', 'D');
+    towerOfHanoi(3, 'S', 'H', 'D');
     return 0;
 }
 
+/*
+(3, S, A, D)
+(2, S, D, A)
+(1, S, A, D)
+
+*/
