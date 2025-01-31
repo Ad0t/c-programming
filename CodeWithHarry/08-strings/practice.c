@@ -16,10 +16,15 @@ that the strings are equal.
 void queso2 () {
     char str1[100], str2[100];
     printf("Enter a string: ");
-    scanf("%s", str1);
+    scanf("%s", &str1);
     printf("Enter another string: ");
-    scanf("%c", str2);
-    printf("%s %c", str1, str2);
+    for (int i = 0; i < 6; i++) {
+        scanf("%c", &str2);
+    }
+    str2[5] = 
+    printf("The first string is: %s\n", str1);
+    printf("The second string is: %s\n", str2);
+    printf("\n%s \n%c", str1, str2);
 }
 /*
 Write your own version of strlen function from <string.h>
@@ -48,5 +53,5 @@ Write a program to check whether a given character is present in a string or not
 
 
 int main () {
-
+    queso2();
 }
