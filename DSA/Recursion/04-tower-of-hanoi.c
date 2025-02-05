@@ -4,7 +4,6 @@
 
 void towerOfHanoi (int n, char src, char aux, char des);
 
-
 void towerOfHanoi (int n, char src, char aux, char des) {
     if (n == 0) {
         return;

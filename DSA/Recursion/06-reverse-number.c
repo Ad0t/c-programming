@@ -11,4 +11,5 @@ int reversingNumber (int n, int len) {
 int main () {
     int x = reversingNumber(1234567, 7);
     printf("%d", x);
+    return 0;
 }
